@@ -6,14 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+    <script src="./js/index.js" defer></script>
     <title>Calculator</title>
   </head>
-  <body class="body grid">
-    <main>
+  <body class="body grid bg-gradient-to-r from-[#D7E1EC] to-[#FFFFFF]">
+    <span
+      class="bg-gradient-to-r from-[#335C81] to-[#FFFFFF] scale-0 dark:scale-500 transition-all duration-1000 rounded-full fixed z-0 w-16 h-16 dark:w-full dark:h-full bottom-20 right-20"
+    ></span>
+    <main class="rounded-md bg-white dark:bg-gray-900 z-10">
       <section class="result">
-        <div class="theme"></div>
+        <div
+          class="theme flex justify-between items-center bg-gray-100 rounded-full dark:bg-gray-800"
+        >
+          <svg
+            class="w-20 h-20 p-4 cursor-pointer fill-gray-900 dark:fill-gray-500 light-icon scale-110 dark:scale-95 transition-transform"
+          >
+            <use xlink:href="./img/sprite.svg#icon-light-up"></use>
+          </svg>
+          <svg
+            class="w-20 h-20 p-4 cursor-pointer fill-gray-500 dark:fill-white moon-icon scale-95 dark:scale-110 transition-transform"
+          >
+            <use xlink:href="./img/sprite.svg#icon-moon "></use>
+          </svg>
+        </div>
+
+        <div class="res">
+          <h2 class="text-2xl font-serif">20 * 2</h2>
+          <h1 class="text-3xl font-serif">40</h1>
+        </div>
       </section>
-      <section class="btns grid grid-cols-4 grid-rows-5"></section>
+      <section
+        class="btns grid grid-cols-4 grid-rows-5 bg-slate-300 dark:bg-gray-800"
+      ></section>
     </main>
   </body>
 </html>

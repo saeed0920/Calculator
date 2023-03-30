@@ -37,4 +37,6 @@ html {
 
 body {
   font-family: sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
   place-items: center; }
