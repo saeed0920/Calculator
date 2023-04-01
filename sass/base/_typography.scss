@@ -1,0 +1,33 @@
+.span-bg-darkMode {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 4rem;
+  height: 4rem;
+  background-image: linear-gradient(to right, #335c81, #ffffff);
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  transform: scale(0);
+  max-width: 100%;
+  max-height: 100%;
+}
+html.dark .span-bg-darkMode {
+  transform: scale(150);
+}
+
+.btn {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 8rem;
+  border: none;
+  transition: all 0.2s 0.1s;
+  font-family: $font-1;
+}
+html.dark .btn {
+  background-color: #272b33;
+}

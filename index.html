@@ -10,21 +10,21 @@
     <title>Calculator</title>
   </head>
   <body class="body grid bg-gradient-to-r from-[#D7E1EC] to-[#FFFFFF]">
-    <span
-      class="bg-gradient-to-r from-[#335C81] to-[#FFFFFF] scale-0 dark:scale-500 transition-all duration-1000 rounded-full fixed z-0 w-16 h-16 dark:w-full dark:h-full bottom-20 right-20"
-    ></span>
-    <main class="rounded-md bg-white dark:bg-gray-900 z-10">
-      <section class="result">
+    <span class="span-bg-darkMode"></span>
+    <main
+      class="rounded-[4rem] overflow-hidden bg-white dark:bg-gray-900 z-10 transition shadow-md"
+    >
+      <section class="result grid">
         <div
-          class="theme flex justify-between items-center bg-gray-100 rounded-full dark:bg-gray-800"
+          class="theme flex justify-between items-center bg-gray-100 rounded-full dark:bg-gray-800 m-auto w-1/4 transition"
         >
           <svg
-            class="w-20 h-20 p-4 cursor-pointer fill-gray-900 dark:fill-gray-500 light-icon scale-110 dark:scale-95 transition-transform"
+            class="w-20 h-20 p-4 cursor-pointer fill-gray-900 dark:fill-gray-500 light-icon scale-125 dark:scale-95 transition-transform"
           >
             <use xlink:href="./img/sprite.svg#icon-light-up"></use>
           </svg>
           <svg
-            class="w-20 h-20 p-4 cursor-pointer fill-gray-500 dark:fill-white moon-icon scale-95 dark:scale-110 transition-transform"
+            class="w-20 h-20 p-4 cursor-pointer fill-gray-500 dark:fill-white moon-icon scale-95 dark:scale-125 transition-transform"
           >
             <use xlink:href="./img/sprite.svg#icon-moon "></use>
           </svg>
@@ -36,8 +36,29 @@
         </div>
       </section>
       <section
-        class="btns grid grid-cols-4 grid-rows-5 bg-slate-300 dark:bg-gray-800"
-      ></section>
+        class="btns grid grid-cols-4 grid-rows-5 bg-[#f9f9f9] dark:bg-[#292d36] gap-10 transition p-8"
+      >
+        <button class="btn text-[#26fbd4]">AC</button>
+        <button class="btn text-[#26fbd4]">+/-</button>
+        <button class="btn text-[#26fbd4]">%</button>
+        <button class="btn text-red-600">/</button>
+        <button class="btn dark:text-white">7</button>
+        <button class="btn dark:text-white">8</button>
+        <button class="btn dark:text-white">9</button>
+        <button class="btn text-red-600">x</button>
+        <button class="btn dark:text-white">4</button>
+        <button class="btn dark:text-white">5</button>
+        <button class="btn dark:text-white">6</button>
+        <button class="btn text-red-600">-</button>
+        <button class="btn dark:text-white">1</button>
+        <button class="btn dark:text-white">2</button>
+        <button class="btn dark:text-white">3</button>
+        <button class="btn text-red-600">+</button>
+        <button class="btn dark:text-white">DEL</button>
+        <button class="btn dark:text-white">0</button>
+        <button class="btn dark:text-white">.</button>
+        <button class="btn text-red-600">=</button>
+      </section>
     </main>
   </body>
 </html>
