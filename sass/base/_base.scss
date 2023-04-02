@@ -19,6 +19,10 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   place-items: center;
+
+  @include res(phone) {
+    place-items: stretch;
+  }
 }
 
 ::selection {
