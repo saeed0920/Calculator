@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/app.js" defer></script>
     <script src="./js/index.js" defer></script>
     <title>Calculator</title>
   </head>
   <body class="body grid bg-gradient-to-r from-[#D7E1EC] to-[#FFFFFF]">
     <span class="span-bg-darkMode"></span>
     <main
+      id="app"
       class="rounded-[4rem] overflow-hidden bg-white dark:bg-[#22252d] z-10 transition shadow-md max-[400px]:rounded-none flex flex-col"
     >
       <section class="result grid p-16">
@@ -34,37 +37,37 @@
           <h2
             class="text-5xl font-medium text-right font-['Michroma'] dark:text-white"
           >
-            20 * 2
+            {{ numbers }}
           </h2>
           <h1
             class="text-6xl font-bold text-right font-['Michroma'] pt-5 dark:text-white"
           >
-            40
+            {{ numbers }}
           </h1>
         </div>
       </section>
       <section
         class="btns grid grid-cols-4 grid-rows-5 bg-[#f9f9f9] dark:bg-[#292d36] gap-10 transition p-8 rounded-t-[3rem] grow items-center justify-items-center max-[400px]:gap-6"
       >
-        <button class="btn text-[#26fbd4]">AC</button>
+        <button @click="clear" class="btn text-[#26fbd4]">AC</button>
         <button class="btn text-[#26fbd4]">+/-</button>
-        <button class="btn text-[#26fbd4]">%</button>
-        <button class="btn text-red-600">/</button>
-        <button class="btn dark:text-white">7</button>
-        <button class="btn dark:text-white">8</button>
-        <button class="btn dark:text-white">9</button>
-        <button class="btn text-red-600">x</button>
-        <button class="btn dark:text-white">4</button>
-        <button class="btn dark:text-white">5</button>
-        <button class="btn dark:text-white">6</button>
-        <button class="btn text-red-600">-</button>
-        <button class="btn dark:text-white">1</button>
-        <button class="btn dark:text-white">2</button>
-        <button class="btn dark:text-white">3</button>
-        <button class="btn text-red-600">+</button>
-        <button class="btn dark:text-white">DEL</button>
-        <button class="btn dark:text-white">0</button>
-        <button class="btn dark:text-white">.</button>
+        <button class="btn text-[#26fbd4]">&#65285;</button>
+        <button @click="match" value="/" class="btn text-red-600">/</button>
+        <button @click="match" value="7" class="btn dark:text-white">7</button>
+        <button @click="match" value="8" class="btn dark:text-white">8</button>
+        <button @click="match" value="9" class="btn dark:text-white">9</button>
+        <button @click="match" class="btn text-red-600">x</button>
+        <button @click="match" value="4" class="btn dark:text-white">4</button>
+        <button @click="match" value="5" class="btn dark:text-white">5</button>
+        <button @click="match" value="6" class="btn dark:text-white">6</button>
+        <button @click="match" value="-" class="btn text-red-600">-</button>
+        <button @click="match" value="1" class="btn dark:text-white">1</button>
+        <button @click="match" value="2" class="btn dark:text-white">2</button>
+        <button @click="match" value="3" class="btn dark:text-white">3</button>
+        <button @click="match" value="+" class="btn text-red-600">+</button>
+        <button @click="del" class="btn dark:text-white">DEL</button>
+        <button @click="match" value="0" class="btn dark:text-white">0</button>
+        <button @click="dot" value="." class="btn dark:text-white">.</button>
         <button class="btn text-red-600">=</button>
       </section>
     </main>

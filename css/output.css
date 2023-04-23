@@ -659,6 +659,10 @@ video {
   padding: 4rem;
 }
 
+.p-20{
+  padding: 5rem;
+}
+
 .p-4{
   padding: 1rem;
 }
@@ -687,6 +691,10 @@ video {
   font-family: 'Michroma';
 }
 
+.font-serif{
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
@@ -708,6 +716,11 @@ video {
 .text-\[\#26fbd4\]{
   --tw-text-opacity: 1;
   color: rgb(38 251 212 / var(--tw-text-opacity));
+}
+
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 .text-red-600{
