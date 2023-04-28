@@ -1,16 +1,24 @@
 # Calclator
 
-===
+## Vue.js and Tailwind in this project
 
-# Everyone can use
+<div style="display:flex;gap:20px;padding:30px 0;"> 
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png" width="80" height="80" style="max-width: 100%;">
+<img alt="Tailwind CSS" src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/HEAD/.github/logo-dark.svg" width="350" height="80" style="max-width: 100%;">
+</div>
 
-# Vue.js and Tailwind in this project
+## To do list!
 
-# Think about
-
-dark mode (theme)
-icons
-color
-font
-responsive
-algorithm of match
+- functionality
+  <br>
+- dark mode (theme)
+  <br>
+- icons
+  <br>
+- color
+  <br>
+- font
+  <br>
+- responsive
+  <br>
+- algorithm of match
