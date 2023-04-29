@@ -25,12 +25,11 @@ let vm = Vue.createApp({
         return;
       } else if (this.preNumber !== "") {
         this.calculator();
-      } else {
-        this.preNumber = this.mainNumber;
-        this.mainNumber += event.target.textContent;
-        this.preShow = this.mainNumber;
-        this.mainNumber = ``;
       }
+      this.preNumber = this.mainNumber;
+      this.mainNumber += event.target.textContent;
+      this.preShow = this.mainNumber;
+      this.mainNumber = ``;
     },
     clear() {
       this.mainNumber = ``;
@@ -40,9 +39,7 @@ let vm = Vue.createApp({
       this.checkDot = false;
     },
     del() {
-      if (!this.rest && this.mainNumber.length > 1) {
-        this.mainNumber = this.mainNumber.substr(0, this.mainNumber.length - 1);
-      }
+      this.mainNumber = this.mainNumber.substr(0, this.mainNumber.length - 1);
     },
     dot() {
       if (this.mainNumber.search(/[.]/g) === -1) {
@@ -58,8 +55,6 @@ let vm = Vue.createApp({
       const mainN = Number(this.mainNumber);
       const preN = Number(this.preNumber);
       let result;
-      console.log(preN, Number(this.preNumber));
-      console.log(mainN, Number(this.mainNumber));
       if (isNaN(mainN) || isNaN(preN)) return;
       switch (this.operation) {
         case "x":
@@ -77,13 +72,18 @@ let vm = Vue.createApp({
         case "%":
           result = mainN % preN;
           break;
+        default:
+          return;
       }
 
-      if (result) {
-        this.preNumber += this.mainNumber;
-        this.preShow += this.mainNumber;
-        this.mainNumber = result;
-      }
+      this.preNumber += this.mainNumber;
+      this.mainNumber = result;
+      this.preShow = ``;
+    },
+    formatNumber(numbers) {
+      const number = parseFloat(numbers);
+      if (isNaN(number)) return "";
+      return number.toLocaleString("en");
     },
   },
   computed: {},
