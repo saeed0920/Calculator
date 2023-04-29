@@ -23,4 +23,8 @@
   <br>
 - algorithm of match
 
-> npx tailwindcss -i ./css/style.css -o ./css/output.css --watch
+> This site was built using [GitHub Pages](https://saeed0920.github.io/Calculator/).
+
+```ruby
+npx tailwindcss -i ./css/style.css -o ./css/output.css --watch
+```
