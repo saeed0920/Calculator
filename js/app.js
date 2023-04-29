@@ -58,19 +58,16 @@ let vm = Vue.createApp({
       if (isNaN(mainN) || isNaN(preN)) return;
       switch (this.operation) {
         case "x":
-          result = mainN * preN;
+          result = preN * mainN;
           break;
         case "/":
-          result = mainN / preN;
+          result = preN / mainN;
           break;
         case "-":
-          result = mainN - preN;
+          result = preN - mainN;
           break;
         case "+":
-          result = mainN + preN;
-          break;
-        case "%":
-          result = mainN % preN;
+          result = preN + mainN;
           break;
         default:
           return;
