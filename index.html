@@ -15,7 +15,7 @@
     <span class="span-bg-darkMode"></span>
     <main
       id="app"
-      class="rounded-[4rem] overflow-hidden bg-white dark:bg-[#22252d] z-10 transition shadow-md max-[400px]:rounded-none flex flex-col"
+      class="rounded-[4rem] overflow-hidden bg-white dark:bg-[#22252d] z-10 transition shadow-md max-[400px]:rounded-none flex flex-col p-6"
     >
       <section class="result grid p-16">
         <div
@@ -35,11 +35,13 @@
 
         <div class="res pt-16 gap-4 flex flex-col">
           <h2
+            v-cloak
             class="text-5xl font-medium text-right font-['Michroma'] dark:text-white preNumber"
           >
             {{ (preShow) }}
           </h2>
           <h1
+            v-cloak
             class="text-6xl font-bold text-right font-['Michroma'] pt-5 dark:text-white mainNumber"
           >
             {{ (mainNumber) }}
@@ -49,9 +51,13 @@
       <section
         class="btns grid grid-cols-4 grid-rows-5 bg-[#f9f9f9] dark:bg-[#292d36] gap-10 transition p-8 rounded-t-[3rem] grow items-center justify-items-center max-[400px]:gap-6"
       >
-        <button @click="clear" class="btn text-[#26fbd4]">AC</button>
-        <button class="btn text-[#26fbd4]">+/-</button>
-        <button class="btn text-[#26fbd4]">&#65285;</button>
+        <button @click="clear" class="btn text-[#26fbd4] col-span-2 !w-full">
+          AC
+        </button>
+
+        <button @click="operationF" value="%" class="btn text-[#26fbd4]">
+          &#65285;
+        </button>
         <button @click="operationF" value="/" class="btn text-red-600">
           /
         </button>

@@ -526,6 +526,10 @@ video {
   z-index: 10;
 }
 
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
 .m-auto{
   margin: auto;
 }
@@ -540,6 +544,10 @@ video {
 
 .h-20{
   height: 5rem;
+}
+
+.\!w-full{
+  width: 100% !important;
 }
 
 .w-1\/4{
@@ -669,6 +677,10 @@ video {
 
 .p-8{
   padding: 2rem;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .pt-16{
@@ -832,8 +844,8 @@ html {
 
 body {
   font-family: sans-serif;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100dvh;
+  min-height: 100dvh;
   place-items: center;
 }
 
@@ -841,6 +853,10 @@ body {
   body {
     place-items: stretch;
   }
+}
+
+[v-cloak] {
+  display: none;
 }
 
 .transition {

@@ -17,7 +17,8 @@ let vm = Vue.createApp({
         this.preShow = ``;
         this.rest = false;
       }
-      this.mainNumber += event.target.textContent;
+      if (this.mainNumber.length < 9)
+        this.mainNumber += event.target.textContent;
     },
     operationF(event) {
       this.operation = event.target.value;
@@ -68,6 +69,9 @@ let vm = Vue.createApp({
           break;
         case "+":
           result = preN + mainN;
+          break;
+        case "%":
+          result = (preN * mainN) / 100;
           break;
         default:
           return;

@@ -27,3 +27,7 @@ body {
 
 ::selection {
 }
+
+[v-cloak] {
+  display: none;
+}
