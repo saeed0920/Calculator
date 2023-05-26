@@ -602,12 +602,12 @@ video {
   justify-items: center;
 }
 
-.gap-10{
-  gap: 2.5rem;
-}
-
 .gap-4{
   gap: 1rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
 }
 
 .overflow-hidden{
@@ -675,22 +675,8 @@ video {
   padding: 1rem;
 }
 
-.p-6{
-  padding: 1.5rem;
-}
-
 .p-8{
   padding: 2rem;
-}
-
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pt-16{
@@ -699,10 +685,6 @@ video {
 
 .pt-5{
   padding-top: 1.25rem;
-}
-
-.pt-6{
-  padding-top: 1.5rem;
 }
 
 .text-right{
@@ -807,7 +789,7 @@ html.dark .span-bg-darkMode {
   font-size: 2rem;
   text-align: center;
   font-weight: 700;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #f7f7f7;
   border-radius: 2rem;
   width: 8rem;
@@ -866,6 +848,17 @@ body {
 @media only screen and (max-width: 25.5em) {
   body {
     place-items: stretch;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  body {
+    min-width: 100%;
+    min-height: 100%;
+    height: 100dvh;
+    width: 10dvh;
   }
 }
 
@@ -930,6 +923,14 @@ body {
 
   .max-\[400px\]\:gap-6{
     gap: 1.5rem;
+  }
+
+  .max-\[400px\]\:gap-4{
+    gap: 1rem;
+  }
+
+  .max-\[400px\]\:gap-2{
+    gap: 0.5rem;
   }
 
   .max-\[400px\]\:rounded-none{

@@ -22,6 +22,14 @@ body {
 
   @include res(phone) {
     place-items: stretch;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  @media only screen and (max-width: 50em) {
+    min-width: 100%;
+    min-height: 100%;
+    height: 100dvh;
+    width: 10dvh;
   }
 }
 
